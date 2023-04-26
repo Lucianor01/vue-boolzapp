@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row g-0">
                     <!-- LEFT HEADER -->
-                    <div class="col-4">
+                    <div class="col-4 bg-white">
                         <div class="d-flex justify-content-between align-items-center p-2 bg_grey_white">
                             <div class="d-flex align-items-center">
                                 <img class="img_header me-2" src="./assets/img/avatar_io.jpg" alt="avatar_1">
@@ -56,7 +56,7 @@
                                   </div>
                             </div>
                             <!-- UTENTI -->
-                            <div>
+                            <div id="container_utenti" class="overflow-auto">
                                 <!-- MICHELE -->
                                 <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
@@ -180,9 +180,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-8 d-flex flex-column justify-content-between">
                         <!-- RIGHT HEADER -->
-                        <div class="d-flex align-items-center justify-content-between p-1 bg_grey_white">
+                        <div class="d-flex align-items-center justify-content-between p-1 bg_grey_white px-2 border-start border-secondary-subtle">
                             <div class="d-flex align-items-center">
                                 <img class="img_header me-2" src="./assets/img/avatar_1.jpg" alt="avatar_1">
                                 <div class="d-flex flex-column">
@@ -196,17 +196,32 @@
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                         </div>
-                        <div id="container_chat">
-                            <div>
-
-                            </div>
-                            <div class="">
-                                <div class="position-relative p-3">
-                                  <span>Hai portato a spasso il cane?</span>
-                                  <span class="container_orario_chat position-absolute">15:30</span>
+                        <!-- CHAT -->
+                        <div id="container_chat" class="p-5 overflow-auto">
+                            <div class="d-flex flex-column">
+                                <div class="position-relative p-3 bg_light_green rounded chat_message align-self-end">
+                                    <span>Hai portato a spasso il cane?</span>
+                                    <span class="container_orario_chat position-absolute">15:30</span>
                                 </div>
-                                <div>
+                                <div class="bg_light_green p-3 position-relative rounded chat_message align-self-end">
                                     <span>Ricordati di stendere i panni</span>
+                                    <span class="container_orario_chat position-absolute">15:30</span>
+                                </div>
+                                <div class="position-relative p-3 bg-white rounded chat_message">
+                                    <span>Tutto fatto!</span>
+                                    <span class="container_orario_chat position-absolute">15:30</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- INPUT MESSAGE -->
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between bg_light_green_2 p-2">
+                                <div>
+                                    <i class="fa-regular fa-face-smile text_color_black_gray"></i>
+                                </div>
+                                    <input class="form-control mx-2" type="text" placeholder="Scrivi un messaggio" aria-label="default input example">
+                                <div>
+                                    <i class="fa-solid fa-microphone text_color_black_gray"></i>
                                 </div>
                             </div>
                         </div>

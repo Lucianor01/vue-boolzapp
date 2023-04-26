@@ -7,45 +7,71 @@ body {
     background: linear-gradient(0deg, #dadbd3 80%, rgba(0, 150, 136, 1) 0%);
 }
 
-i{
+i {
     color: #b1b1b1;
 }
 
-.img_header{
+.img_header {
     width: 40px;
 }
 
-.bg_grey_white{
+.bg_grey_white {
     background-color: #eaeaea;
 }
 
-.container_notifiche{
+.container_notifiche {
     background-color: #8edafc;
-    
+
 }
 
-.container_notifiche i{
+.container_notifiche i {
     border-radius: 50%;
     padding: 10px 8px;
     background-color: white;
     color: #8edafc;
 }
 
-.img_utente{
+#container_utenti{
+    background-color: white;
+    height: 72.5vh;
+}
+
+.img_utente {
     width: 15%;
     border-radius: 50%;
 }
 
-.container_orario_utente{
+.container_orario_utente {
     right: 0;
     top: 0;
 }
 
-#container_chat{
+#container_chat {
+    height: 80vh;
     background-image: url(../img/mine.jpg);
 }
 
-.container_orario_chat{
-    right: 0;
-    bottom: 0;
+.bg_light_green {
+    background-color: #d5f9ba;
+}
+
+.container_orario_chat {
+    right: 10px;
+    bottom: 5px;
+}
+
+.chat_message {
+    width: 40%;
+    line-height: 18px;
+    font-size: 15px;
+    margin: 8px 0;
+    word-wrap: break-word;
+}
+
+.bg_light_green_2{
+    background-color: #f3eeea;
+}
+
+.text_color_black_gray{
+    color: #6b7376;
 }
