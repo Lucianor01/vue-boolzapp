@@ -57,8 +57,23 @@
                             </div>
                             <!-- UTENTI -->
                             <div id="container_utenti" class="overflow-auto">
+                                <!-- LISTA UTENTI -->
+                                <div v-for="(element, index) in contacts" :key="index" class="p-2 bg-white border-top">
+                                    <div class="d-flex position-relative">
+                                        <img class="img_utente me-2" v-bind:src="'./assets' + element.avatar" v-bind:alt="element.name">
+                                        <div class="">
+                                            <div>
+                                                <span>{{ element.name }}</span>
+                                            </div>
+                                            <div class="">
+                                                <span>Ultimo messaggio inviato</span>
+                                            </div>
+                                            <span class="container_orario_utente position-absolute">12:00</span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- MICHELE -->
-                                <div class="p-2 bg-white border-top">
+                                <!-- <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" src="./assets/img/avatar_1.jpg" alt="avatar_1">
                                         <div class="">
@@ -71,9 +86,9 @@
                                             <span class="container_orario_utente position-absolute">12:00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- FABIO -->
-                                <div class="p-2 bg-white border-top">
+                               <!--  <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" src="./assets/img/avatar_2.jpg" alt="avatar_2">
                                         <div class="">
@@ -86,9 +101,9 @@
                                             <span class="container_orario_utente position-absolute">12:00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- SAMUELE -->
-                                <div class="p-2 bg-white border-top">
+                                <!-- <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" src="./assets/img/avatar_3.jpg" alt="avatar_3">
                                         <div class="">
@@ -101,9 +116,9 @@
                                             <span class="container_orario_utente position-absolute">12:00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- ALESSANDRO B. -->
-                                <div class="p-2 bg-white border-top">
+                                <!-- <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" src="./assets/img/avatar_4.jpg" alt="avatar_4">
                                         <div class="">
@@ -116,9 +131,9 @@
                                             <span class="container_orario_utente position-absolute">12:00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- ALESSANDRO L. -->
-                                <div class="p-2 bg-white border-top">
+                                <!-- <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" src="./assets/img/avatar_5.jpg" alt="avatar_5">
                                         <div class="">
@@ -131,9 +146,9 @@
                                             <span class="container_orario_utente position-absolute">12:00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- CLAUDIA -->
-                                <div class="p-2 bg-white border-top">
+                                <!-- <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" src="./assets/img/avatar_6.jpg" alt="avatar_6">
                                         <div class="">
@@ -146,9 +161,9 @@
                                             <span class="container_orario_utente position-absolute">12:00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- FEDERICO -->
-                                <div class="p-2 bg-white border-top">
+                                <!-- <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" src="./assets/img/avatar_7.jpg" alt="avatar_7">
                                         <div class="">
@@ -161,9 +176,9 @@
                                             <span class="container_orario_utente position-absolute">12:00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- DAVIDE -->
-                                <div class="p-2 bg-white border-top">
+                                <!-- <div class="p-2 bg-white border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" src="./assets/img/avatar_8.jpg" alt="avatar_8">
                                         <div class="">
@@ -176,7 +191,7 @@
                                             <span class="container_orario_utente position-absolute">12:00</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
