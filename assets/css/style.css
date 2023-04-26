@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background: #dadbd3;
+    background: linear-gradient(0deg, #dadbd3 80%, rgba(0, 150, 136, 1) 0%);
+}
+
+i{
+    color: #b1b1b1;
+}
+
+.img_header{
+    width: 40px;
+}
+
+.bg_grey_white{
+    background-color: #eaeaea;
+}
+
+.container_notifiche{
+    background-color: #8edafc;
+    
+}
+
+.container_notifiche i{
+    border-radius: 50%;
+    padding: 10px 8px;
+    background-color: white;
+    color: #8edafc;
+}
+
+.img_utente{
+    width: 15%;
+    border-radius: 50%;
+}
+
+.container_orario_utente{
+    right: 0;
+    top: 0;
+}
+
+#container_chat{
+    background-image: url(../img/mine.jpg);
+}
+
+.container_orario_chat{
+    right: 0;
+    bottom: 0;
+}
