@@ -4,7 +4,7 @@ body {
     justify-content: center;
     height: 100vh;
     background: #dadbd3;
-    background: linear-gradient(0deg, #dadbd3 80%, rgba(0, 150, 136, 1) 0%);
+    background: linear-gradient(0deg, #dadbd3 85%, rgba(0, 150, 136, 1) 0%);
 }
 
 i {
@@ -13,6 +13,7 @@ i {
 
 .img_header {
     width: 40px;
+    border-radius: 50%;
 }
 
 .bg_grey_white {
@@ -44,6 +45,7 @@ i {
 .container_orario_utente {
     right: 0;
     top: 0;
+    font-size: 13px;
 }
 
 #container_chat {
