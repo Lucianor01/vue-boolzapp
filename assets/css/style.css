@@ -37,6 +37,11 @@ i {
     height: 72.5vh;
 }
 
+#lista_utenti:hover{
+    background-color: #e9ebeb;
+    cursor: pointer;
+}
+
 .img_utente {
     width: 15%;
     border-radius: 50%;
@@ -49,7 +54,7 @@ i {
 }
 
 #container_chat {
-    height: 80vh;
+    height: 84vh;
     background-image: url(../img/mine.jpg);
 }
 

@@ -58,140 +58,22 @@
                             <!-- UTENTI -->
                             <div id="container_utenti" class="overflow-auto">
                                 <!-- LISTA UTENTI -->
-                                <div v-for="(element, index) in contacts" :key="index" class="p-2 bg-white border-top">
+                                <div v-for="(element, index) in contacts" :key="index" 
+                                @click="changeUtenti(index)" 
+                                id="lista_utenti" class="p-2 border-top">
                                     <div class="d-flex position-relative">
                                         <img class="img_utente me-2" v-bind:src="'./assets' + element.avatar" v-bind:alt="element.name">
-                                        <div class="">
+                                        <div>
                                             <div>
                                                 <span><strong>{{ element.name }}</strong></span>
                                             </div>
-                                            <div class="">
+                                            <div>
                                                 <span class="text-secondary">Ultimo messaggio inviato</span>
                                             </div>
                                             <span class="container_orario_utente position-absolute text-secondary">12:00</span>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- MICHELE -->
-                                <!-- <div class="p-2 bg-white border-top">
-                                    <div class="d-flex position-relative">
-                                        <img class="img_utente me-2" src="./assets/img/avatar_1.jpg" alt="avatar_1">
-                                        <div class="">
-                                            <div>
-                                                <span>Michele</span>
-                                            </div>
-                                            <div class="">
-                                                <span>Ultimo messaggio inviato</span>
-                                            </div>
-                                            <span class="container_orario_utente position-absolute">12:00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- FABIO -->
-                               <!--  <div class="p-2 bg-white border-top">
-                                    <div class="d-flex position-relative">
-                                        <img class="img_utente me-2" src="./assets/img/avatar_2.jpg" alt="avatar_2">
-                                        <div class="">
-                                            <div>
-                                                <span>Fabio</span>
-                                            </div>
-                                            <div class="">
-                                                <span>Ultimo messaggio inviato</span>
-                                            </div>
-                                            <span class="container_orario_utente position-absolute">12:00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- SAMUELE -->
-                                <!-- <div class="p-2 bg-white border-top">
-                                    <div class="d-flex position-relative">
-                                        <img class="img_utente me-2" src="./assets/img/avatar_3.jpg" alt="avatar_3">
-                                        <div class="">
-                                            <div>
-                                                <span>Samuele</span>
-                                            </div>
-                                            <div class="">
-                                                <span>Ultimo messaggio inviato</span>
-                                            </div>
-                                            <span class="container_orario_utente position-absolute">12:00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- ALESSANDRO B. -->
-                                <!-- <div class="p-2 bg-white border-top">
-                                    <div class="d-flex position-relative">
-                                        <img class="img_utente me-2" src="./assets/img/avatar_4.jpg" alt="avatar_4">
-                                        <div class="">
-                                            <div>
-                                                <span>Alessandro B.</span>
-                                            </div>
-                                            <div class="">
-                                                <span>Ultimo messaggio inviato</span>
-                                            </div>
-                                            <span class="container_orario_utente position-absolute">12:00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- ALESSANDRO L. -->
-                                <!-- <div class="p-2 bg-white border-top">
-                                    <div class="d-flex position-relative">
-                                        <img class="img_utente me-2" src="./assets/img/avatar_5.jpg" alt="avatar_5">
-                                        <div class="">
-                                            <div>
-                                                <span>Alessandro L.</span>
-                                            </div>
-                                            <div class="">
-                                                <span>Ultimo messaggio inviato</span>
-                                            </div>
-                                            <span class="container_orario_utente position-absolute">12:00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- CLAUDIA -->
-                                <!-- <div class="p-2 bg-white border-top">
-                                    <div class="d-flex position-relative">
-                                        <img class="img_utente me-2" src="./assets/img/avatar_6.jpg" alt="avatar_6">
-                                        <div class="">
-                                            <div>
-                                                <span>Claudia</span>
-                                            </div>
-                                            <div class="">
-                                                <span>Ultimo messaggio inviato</span>
-                                            </div>
-                                            <span class="container_orario_utente position-absolute">12:00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- FEDERICO -->
-                                <!-- <div class="p-2 bg-white border-top">
-                                    <div class="d-flex position-relative">
-                                        <img class="img_utente me-2" src="./assets/img/avatar_7.jpg" alt="avatar_7">
-                                        <div class="">
-                                            <div>
-                                                <span>Federico</span>
-                                            </div>
-                                            <div class="">
-                                                <span>Ultimo messaggio inviato</span>
-                                            </div>
-                                            <span class="container_orario_utente position-absolute">12:00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- DAVIDE -->
-                                <!-- <div class="p-2 bg-white border-top">
-                                    <div class="d-flex position-relative">
-                                        <img class="img_utente me-2" src="./assets/img/avatar_8.jpg" alt="avatar_8">
-                                        <div class="">
-                                            <div>
-                                                <span>Davide</span>
-                                            </div>
-                                            <div class="">
-                                                <span>Ultimo messaggio inviato</span>
-                                            </div>
-                                            <span class="container_orario_utente position-absolute">12:00</span>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -212,20 +94,13 @@
                             </div>
                         </div>
                         <!-- CHAT -->
-                        <div id="container_chat" class="p-5 overflow-auto">
-                            <div class="d-flex flex-column">
-                                <div class="position-relative p-3 bg_light_green rounded chat_message align-self-end">
-                                    <span>Hai portato a spasso il cane?</span>
-                                    <span class="container_orario_chat position-absolute">15:30</span>
+                        <div id="container_chat" class="p-5 overflow-auto border-end">
+                            <div v-for="(messaggio, index) in contacts[currentActive].messages" :key="index" class="d-flex flex-column">
+                                <div :class="(messaggio.status === 'sent') ? 'position-relative p-3 bg_light_green rounded chat_message align-self-end' : 'position-relative p-3 bg-white rounded chat_message'">
+                                    <span>{{messaggio.message }}</span>
+                                    <span class="container_orario_chat position-absolute">{{ messaggio.date }}</span>
                                 </div>
-                                <div class="bg_light_green p-3 position-relative rounded chat_message align-self-end">
-                                    <span>Ricordati di stendere i panni</span>
-                                    <span class="container_orario_chat position-absolute">15:30</span>
-                                </div>
-                                <div class="position-relative p-3 bg-white rounded chat_message">
-                                    <span>Tutto fatto!</span>
-                                    <span class="container_orario_chat position-absolute">15:30</span>
-                                </div>
+                     
                             </div>
                         </div>
                         <!-- INPUT MESSAGE -->
