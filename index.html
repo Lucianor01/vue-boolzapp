@@ -81,9 +81,9 @@
                         <!-- RIGHT HEADER -->
                         <div class="d-flex align-items-center justify-content-between p-1 bg_grey_white px-2 border-start border-secondary-subtle">
                             <div class="d-flex align-items-center">
-                                <img class="img_header me-2" src="./assets/img/avatar_1.jpg" alt="avatar_1">
+                                <img class="img_header me-2" v-bind:src="'./assets' + contacts[currentActive].avatar" v-bind:alt="contacts[currentActive].avatar">
                                 <div class="d-flex flex-column">
-                                    <span><strong>Michele</strong></span>
+                                    <span><strong>{{ contacts[currentActive].name }}</strong></span>
                                     <span class="d-block">Ultimo accesso oggi alle 12:00</span>
                                 </div>
                             </div>
@@ -100,7 +100,6 @@
                                     <span>{{messaggio.message }}</span>
                                     <span class="container_orario_chat position-absolute">{{ messaggio.date }}</span>
                                 </div>
-                     
                             </div>
                         </div>
                         <!-- INPUT MESSAGE -->
@@ -109,7 +108,8 @@
                                 <div>
                                     <i class="fa-regular fa-face-smile text_color_black_gray"></i>
                                 </div>
-                                    <input class="form-control mx-2" type="text" placeholder="Scrivi un messaggio" aria-label="default input example">
+                                    <input v-model="nuovoMsg" @keyup.enter="inviaMsg" 
+                                    class="form-control mx-2" type="text" placeholder="Scrivi un messaggio" aria-label="default input example">
                                 <div>
                                     <i class="fa-solid fa-microphone text_color_black_gray"></i>
                                 </div>

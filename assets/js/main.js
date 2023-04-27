@@ -8,7 +8,7 @@
 ? ● Click sul contatto mostra la conversazione del contatto cliccato
 
 ! Milestone 3
-? ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando“enter” il testo viene aggiunto al thread sopra, come messaggio verde
+? ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
 ? ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
 
 ! Milestone 4
@@ -25,6 +25,7 @@ createApp({
     data() {
         return {
             currentActive: 0,
+            nuovoMsg: "",
             contacts: [
                 {
                     name: 'Michele',
@@ -193,6 +194,25 @@ createApp({
     methods: {
         changeUtenti(i){
             this.currentActive = i
-        }
+        },
+
+        inviaMsg(){
+            
+            this.contacts[this.currentActive].messages.push({
+                message: this.nuovoMsg,
+                date: new Date().toLocaleString('it-IT'),
+                status: "sent"
+            });
+
+            setTimeout(() => {
+                this.contacts[this.currentActive].messages.push({
+                    message: "ok",
+                    date: new Date().toLocaleString('it-IT'),
+                    status: "received"
+                });
+            }, 1000);
+
+            this.nuovoMsg = ""
+        },
     },
 }).mount('#app')

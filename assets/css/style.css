@@ -69,6 +69,7 @@ i {
 
 .chat_message {
     width: 40%;
+    min-height: 80px;
     line-height: 18px;
     font-size: 15px;
     margin: 8px 0;
