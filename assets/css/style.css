@@ -45,6 +45,7 @@ i {
 .img_utente {
     width: 15%;
     border-radius: 50%;
+    max-height: 62px;
 }
 
 .container_orario_utente {

@@ -61,16 +61,20 @@
                                 <div v-for="(element, index) in listaUtente" :key="index" 
                                 @click="changeUtenti(index)" 
                                 id="lista_utenti" class="p-2 border-top">
-                                    <div class="d-flex position-relative">
+                                    <div class="d-flex position-relative align-items-center">
                                         <img class="img_utente me-2" v-bind:src="'./assets' + element.avatar" v-bind:alt="element.name">
                                         <div>
                                             <div>
                                                 <span><strong>{{ element.name }}</strong></span>
                                             </div>
                                             <div>
-                                                <span class="text-secondary">Ultimo messaggio inviato</span>
+                                                <span class="text-secondary">
+                                                    {{ element.messages[element.messages.length - 1].message }}
+                                                </span>
                                             </div>
-                                            <span class="container_orario_utente position-absolute text-secondary">12:00</span>
+                                            <span class="container_orario_utente position-absolute text-secondary">
+                                                {{ element.messages[element.messages.length - 1].date }}
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
