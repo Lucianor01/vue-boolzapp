@@ -192,23 +192,28 @@ createApp({
             ],
         }
     },
-    computed:{
-        listaUtente(){
+    computed: {
+        listaUtente() {
             return this.contacts.filter((utente) => utente.name.toLowerCase().includes(this.cercaUtente.trim().toLowerCase()))
         }
     },
     methods: {
-        changeUtenti(i){
-            this.currentActive = i
+        
+        changeUtenti(index) {
+            if (this.listaUtente[index] && this.listaUtente[index].visible) {
+                this.currentActive = this.contacts.findIndex(utente => utente.name === this.listaUtente[index].name);
+            }
         },
 
-        inviaMsg(){
-            
+        inviaMsg() {
+
             this.contacts[this.currentActive].messages.push({
                 message: this.nuovoMsg,
                 date: new Date().toLocaleString('it-IT'),
                 status: "sent"
             });
+
+            this.nuovoMsg = ""
 
             setTimeout(() => {
                 this.contacts[this.currentActive].messages.push({
@@ -217,8 +222,7 @@ createApp({
                     status: "received"
                 });
             }, 1000);
-
-            this.nuovoMsg = ""
+            
         },
     },
 }).mount('#app')
