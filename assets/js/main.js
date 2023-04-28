@@ -224,5 +224,10 @@ createApp({
             }, 1000);
             
         },
+
+        eliminaMessaggio(index) {
+            this.contacts[this.currentActive].messages.splice(index, 1);
+          }
+          
     },
 }).mount('#app')

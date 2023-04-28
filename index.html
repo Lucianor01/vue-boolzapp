@@ -103,6 +103,15 @@
                                 <div :class="(messaggio.status === 'sent') ? 'position-relative p-3 bg_light_green rounded chat_message align-self-end' : 'position-relative p-3 bg-white rounded chat_message'">
                                     <span>{{messaggio.message }}</span>
                                     <span class="container_orario_chat position-absolute">{{ messaggio.date }}</span>
+                                    <div class="dropdown position-absolute top-0 end-0">
+                                        <button class="btn btn-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa-solid fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <li><a @click="eliminaMessaggio(messaggio)" 
+                                            class="dropdown-item" href="#">Elimina messaggio</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
