@@ -58,7 +58,7 @@
                             <!-- UTENTI -->
                             <div id="container_utenti" class="overflow-auto">
                                 <!-- LISTA UTENTI -->
-                                <div v-for="(element, index) in listaUtente" :key="index" 
+                                <div v-for="(element, index) in listaUtenti" :key="index" 
                                 @click="changeUtenti(index)" 
                                 id="lista_utenti" class="p-2 border-top">
                                     <div class="d-flex position-relative align-items-center">
@@ -67,12 +67,12 @@
                                             <div>
                                                 <span><strong>{{ element.name }}</strong></span>
                                             </div>
-                                            <div>
+                                            <div v-if="element.messages.length !== 0">
                                                 <span class="text-secondary">
                                                     {{ element.messages[element.messages.length - 1].message }}
                                                 </span>
                                             </div>
-                                            <span class="container_orario_utente position-absolute text-secondary">
+                                            <span v-if="element.messages.length !== 0" class="container_orario_utente position-absolute text-secondary">
                                                 {{ element.messages[element.messages.length - 1].date }}
                                             </span>
                                         </div>
@@ -108,7 +108,7 @@
                                             <i class="fa-solid fa-caret-down"></i>
                                         </button>
                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <li><a @click="eliminaMessaggio(messaggio)" 
+                                          <li><a @click="eliminaMessaggio(index)" 
                                             class="dropdown-item" href="#">Elimina messaggio</a></li>
                                         </ul>
                                     </div>

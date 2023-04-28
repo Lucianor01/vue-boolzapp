@@ -184,7 +184,7 @@ createApp({
                         },
                         {
                             date: '10/01/2020, 15:51:00',
-                            message: 'OK!!',
+                            message: 'OK!! 😁',
                             status: 'received'
                         }
                     ],
@@ -193,15 +193,15 @@ createApp({
         }
     },
     computed: {
-        listaUtente() {
+        listaUtenti() {
             return this.contacts.filter((utente) => utente.name.toLowerCase().includes(this.cercaUtente.trim().toLowerCase()))
         }
     },
     methods: {
-        
+
         changeUtenti(index) {
-            if (this.listaUtente[index] && this.listaUtente[index].visible) {
-                this.currentActive = this.contacts.findIndex(utente => utente.name === this.listaUtente[index].name);
+            if (this.listaUtenti[index] && this.listaUtenti[index].visible) {
+                this.currentActive = this.contacts.findIndex(utente => utente.name === this.listaUtenti[index].name);
             }
         },
 
@@ -222,12 +222,14 @@ createApp({
                     status: "received"
                 });
             }, 1000);
-            
+
         },
 
-        eliminaMessaggio(index) {
-            this.contacts[this.currentActive].messages.splice(index, 1);
-          }
-          
+        eliminaMessaggio(indiceMessaggioDaCancellare) {
+            let messaggiUtenteSelezionato = this.contacts[this.currentActive].messages;
+
+            messaggiUtenteSelezionato.splice(indiceMessaggioDaCancellare, 1);
+        }
+
     },
 }).mount('#app')
